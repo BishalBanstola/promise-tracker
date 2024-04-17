@@ -25,3 +25,17 @@ SQLite
 React.js
 Axios
 Styled Components
+
+Database schema and rationale 
+The database schema consists of a single table named promises, designed to manage promises made by users. 
+
+id (INTEGER, PRIMARY KEY, AUTOINCREMENT): Unique identifier for each promise.
+name (TEXT, NOT NULL): Name of the promise maker.
+promise (TEXT, NOT NULL): Content of the promise.
+context (TEXT): Additional context or details.
+promised_on (DATE, NOT NULL): Date when the promise was made.
+to_be_completed_date (DATE, NOT NULL): Deadline for completion.
+category (TEXT): Categorization of promises.
+completed (BOOLEAN, NOT NULL): Status of promise fulfillment.
+
+The rationale behind this schema is to capture essential information about promises made by users and facilitate efficient tracking and management of these promises. Each field serves a specific purpose in providing comprehensive details about each promise, including who made it, what was promised, when it was promised, and whether it has been fulfilled.
